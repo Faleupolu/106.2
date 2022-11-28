@@ -1,8 +1,11 @@
 #include "userlogin.h"
 #include "ui_userlogin.h"
 
+#include "dashboard.h"
 #include <QPixmap>
 #include "usersignup.h"
+#include <QMessageBox>
+
 
 UserLogin::UserLogin(QWidget *parent) :
     QDialog(parent),
@@ -23,5 +26,18 @@ void UserLogin::on_pushButton_SignUp_clicked()
     UserSignup us;
     us.setModal(true);
     us.exec();
+}
+
+
+void UserLogin::on_pushButton_clicked()
+{         //MODAL PROCESS
+     QMessageBox::information(this, tr("login "), tr("successfully login"));
+    this->hide();
+    Dashboard dashBoard;
+   dashBoard.setModal(true);
+    dashBoard.exec();
+
+
+
 }
 

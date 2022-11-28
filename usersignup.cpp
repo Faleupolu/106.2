@@ -4,6 +4,8 @@
 #include <QPixmap>
 #include "userlogin.h"
 
+#include <QMessageBox>
+
 UserSignup::UserSignup(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::UserSignup)
@@ -23,5 +25,11 @@ void UserSignup::on_pushButton_Login_clicked()
     UserLogin ul;
     ul.setModal(true);
     ul.exec();
+}
+
+
+void UserSignup::on_pushButton_2_clicked()
+{
+    QMessageBox::information(this, tr("register "), tr("successfully register"));
 }
 

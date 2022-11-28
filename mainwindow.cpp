@@ -33,10 +33,19 @@ void MainWindow::on_pushButton_SignUp_clicked()
 }
 
 
-void MainWindow::on_actionAdmin_Login_triggered()
+void MainWindow::on_pushButtonadminlogin_clicked()
 {
-    this->hide();
-    al = new AdminLogin(this);
-    al->show();
+
+  this->hide();
+al = new AdminLogin(this);
+al->show();
+}
+
+
+void MainWindow::on_pushButtonadminregister_clicked()
+{    this->hide();
+     us = new UserSignup(this);
+     us->show();
+
 }
 

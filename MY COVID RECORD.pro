@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     adminlogin.cpp \
+    dashboard.cpp \
     main.cpp \
     mainwindow.cpp \
     userlogin.cpp \
@@ -17,12 +18,14 @@ SOURCES += \
 
 HEADERS += \
     adminlogin.h \
+    dashboard.h \
     mainwindow.h \
     userlogin.h \
     usersignup.h
 
 FORMS += \
     adminlogin.ui \
+    dashboard.ui \
     mainwindow.ui \
     userlogin.ui \
     usersignup.ui
