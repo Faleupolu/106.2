@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "filemanager.h"
 #include <QMainWindow>
 #include "userlogin.h"
 #include "usersignup.h"
@@ -37,6 +38,7 @@ private:
     UserSignup *us;
     AdminLogin *al;
      Dashboard *db;
+     FileManager fManager;
 
 };
 #endif // MAINWINDOW_H

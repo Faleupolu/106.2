@@ -1,9 +1,10 @@
 #include "userlogin.h"
 #include "dashboard.h"
 #include <QPixmap>
-#include "usersignup.h"
 #include <QMessageBox>
 #include "ui_userlogin.h"
+#include <QLineEdit>
+
 
 UserLogin::UserLogin(QWidget *parent) :
     QDialog(parent),
@@ -11,6 +12,12 @@ UserLogin::UserLogin(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    //setting up line edits for email and password
+    QLineEdit* userEmail = ui->emailField;
+        userEmail->setPlaceholderText("Insert Email here...");
+    QLineEdit* userPassword = ui->passField;
+        userPassword->setPlaceholderText("Insert Password Here...");
+        userPassword->setEchoMode(QLineEdit::EchoMode::Password);
 }
 
 UserLogin::~UserLogin()
@@ -18,24 +25,32 @@ UserLogin::~UserLogin()
     delete ui;
 }
 
-void UserLogin::on_pushButton_SignUp_clicked()
+void UserLogin::on_loginButton_clicked()
 {
-    this->hide();
-    UserSignup us;
-    us.setModal(true);
-    us.exec();
-}
+    QLineEdit* userEmail = ui->emailField;
+    QLineEdit* userPassword = ui->passField;
 
+    QVector<QVector<QString>> fileContent = fManager.ReadFile("LoginInformation", 3);
 
-void UserLogin::on_pushButton_clicked()
-{         //MODAL PROCESS
-     QMessageBox::information(this, tr("login "), tr("successfully login"));
-    this->hide();
-    Dashboard dashBoard;
-   dashBoard.setModal(true);
-    dashBoard.exec();
+    for(int i = 0; i < fileContent.size(); i++) {
 
+        if(userEmail->text() == fileContent.at(i).at(0)) {
+            if(userPassword->text() == fileContent.at(i).at(1)) {
+                signedIn = true;
+                QMessageBox::information(this, "Login", "Successfully loged in!!");
+            }
 
+            else{
+                QMessageBox::warning(this, "Login", "Incorrect Password");
+            }
+        }
 
-}
+        else{
+            continue;
+            }
+        }
+        if(!signedIn) {
+            QMessageBox::warning(this, "Login", "No user was found");
+        }
+    }
 

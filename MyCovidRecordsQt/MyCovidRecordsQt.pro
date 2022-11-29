@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     adminlogin.cpp \
     dashboard.cpp \
+    filemanager.cpp \
     main.cpp \
     mainwindow.cpp \
     userlogin.cpp \
@@ -19,6 +20,7 @@ SOURCES += \
 HEADERS += \
     adminlogin.h \
     dashboard.h \
+    filemanager.h \
     mainwindow.h \
     userlogin.h \
     usersignup.h

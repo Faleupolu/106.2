@@ -29,7 +29,7 @@ public:
     QLabel *label;
     QLabel *label_image1;
     QGroupBox *groupBox;
-    QPushButton *pushButton;
+    QPushButton *loginButton;
     QLabel *label_2;
     QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
@@ -38,9 +38,9 @@ public:
     QSpacerItem *verticalSpacer;
     QLabel *label_5;
     QVBoxLayout *verticalLayout_2;
-    QLineEdit *lineEdit;
+    QLineEdit *emailField;
     QSpacerItem *verticalSpacer_2;
-    QLineEdit *lineEdit_2;
+    QLineEdit *passField;
     QGroupBox *groupBox_2;
     QLabel *label_4;
     QPushButton *pushButton_SignUp;
@@ -62,10 +62,10 @@ public:
         groupBox = new QGroupBox(UserLogin);
         groupBox->setObjectName("groupBox");
         groupBox->setGeometry(QRect(110, 220, 301, 225));
-        pushButton = new QPushButton(groupBox);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(20, 180, 261, 25));
-        pushButton->setStyleSheet(QString::fromUtf8("font: 87 9pt \"Arial Black\";\n"
+        loginButton = new QPushButton(groupBox);
+        loginButton->setObjectName("loginButton");
+        loginButton->setGeometry(QRect(20, 180, 261, 25));
+        loginButton->setStyleSheet(QString::fromUtf8("font: 87 9pt \"Arial Black\";\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(0, 170, 0);"));
         label_2 = new QLabel(groupBox);
@@ -74,7 +74,7 @@ public:
         label_2->setStyleSheet(QString::fromUtf8("font: 87 9pt \"Arial Black\";"));
         layoutWidget = new QWidget(groupBox);
         layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(20, 70, 261, 71));
+        layoutWidget->setGeometry(QRect(20, 70, 261, 74));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -99,19 +99,19 @@ public:
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName("verticalLayout_2");
-        lineEdit = new QLineEdit(layoutWidget);
-        lineEdit->setObjectName("lineEdit");
+        emailField = new QLineEdit(layoutWidget);
+        emailField->setObjectName("emailField");
 
-        verticalLayout_2->addWidget(lineEdit);
+        verticalLayout_2->addWidget(emailField);
 
         verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         verticalLayout_2->addItem(verticalSpacer_2);
 
-        lineEdit_2 = new QLineEdit(layoutWidget);
-        lineEdit_2->setObjectName("lineEdit_2");
+        passField = new QLineEdit(layoutWidget);
+        passField->setObjectName("passField");
 
-        verticalLayout_2->addWidget(lineEdit_2);
+        verticalLayout_2->addWidget(passField);
 
 
         horizontalLayout->addLayout(verticalLayout_2);
@@ -147,7 +147,7 @@ public:
         label->setText(QCoreApplication::translate("UserLogin", "My Covid Record", nullptr));
         label_image1->setText(QString());
         groupBox->setTitle(QString());
-        pushButton->setText(QCoreApplication::translate("UserLogin", "Log in", nullptr));
+        loginButton->setText(QCoreApplication::translate("UserLogin", "Log in", nullptr));
         label_2->setText(QCoreApplication::translate("UserLogin", "Log in ", nullptr));
         label_3->setText(QCoreApplication::translate("UserLogin", "Email Address", nullptr));
         label_5->setText(QCoreApplication::translate("UserLogin", "Password", nullptr));

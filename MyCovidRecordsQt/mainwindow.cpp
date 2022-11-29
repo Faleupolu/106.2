@@ -25,12 +25,7 @@ void MainWindow::on_pushButton_Login_clicked()
 }
 
 
-void MainWindow::on_pushButton_SignUp_clicked()
-{
-    this->hide();
-    us = new UserSignup(this);
-    us->show();
-}
+
 
 
 void MainWindow::on_pushButtonadminlogin_clicked()
@@ -42,10 +37,5 @@ al->show();
 }
 
 
-void MainWindow::on_pushButtonadminregister_clicked()
-{    this->hide();
-     us = new UserSignup(this);
-     us->show();
 
-}
 

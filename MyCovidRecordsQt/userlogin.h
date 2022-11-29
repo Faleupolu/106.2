@@ -1,6 +1,7 @@
 #ifndef USERLOGIN_H
 #define USERLOGIN_H
 
+#include "filemanager.h"
 #include <QDialog>
 
 namespace Ui {
@@ -16,12 +17,14 @@ public:
     ~UserLogin();
 
 private slots:
-    void on_pushButton_SignUp_clicked();
+    void on_loginButton_clicked();
 
-    void on_pushButton_clicked();
+
 
 private:
     Ui::UserLogin *ui;
+    FileManager fManager;
+    bool signedIn = false;
 };
 
 #endif // USERLOGIN_H
