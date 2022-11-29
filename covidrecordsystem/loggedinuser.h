@@ -1,4 +1,0 @@
-#ifndef LOGGEDINUSER_H
-#define LOGGEDINUSER_H
-
-#endif // LOGGEDINUSER_H
