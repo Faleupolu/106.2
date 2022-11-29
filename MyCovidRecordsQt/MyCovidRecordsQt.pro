@@ -9,16 +9,31 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    adminlogin.cpp \
+    dashboard.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    userlogin.cpp \
+    usersignup.cpp
 
 HEADERS += \
-    mainwindow.h
+    adminlogin.h \
+    dashboard.h \
+    mainwindow.h \
+    userlogin.h \
+    usersignup.h
 
 FORMS += \
-    mainwindow.ui
+    adminlogin.ui \
+    dashboard.ui \
+    mainwindow.ui \
+    userlogin.ui \
+    usersignup.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    MyCovidRecordsQt.pro.user

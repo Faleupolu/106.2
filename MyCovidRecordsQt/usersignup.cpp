@@ -1,7 +1,6 @@
 #include "usersignup.h"
-//#include "ui_usersignup.h"
-
 #include <QPixmap>
+#include "ui_usersignup.h"
 #include "userlogin.h"
 
 #include <QMessageBox>
