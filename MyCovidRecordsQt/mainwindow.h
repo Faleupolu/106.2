@@ -26,9 +26,9 @@ private slots:
 
     void on_pushButton_SignUp_clicked();
 
-    void on_pushButtonadminlogin_clicked();
+    void on_adminlogin_clicked();
 
-    void on_pushButtonadminregister_clicked();
+    void on_adminregister_clicked();
 
 
 

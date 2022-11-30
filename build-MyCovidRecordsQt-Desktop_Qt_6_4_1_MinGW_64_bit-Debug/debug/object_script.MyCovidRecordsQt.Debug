@@ -1,5 +1,6 @@
 debug/adminlogin.o
 debug/dashboard.o
+debug/filemanager.o
 debug/main.o
 debug/mainwindow.o
 debug/userlogin.o

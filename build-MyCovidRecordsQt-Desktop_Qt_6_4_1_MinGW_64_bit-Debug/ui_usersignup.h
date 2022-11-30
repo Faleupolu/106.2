@@ -59,7 +59,7 @@ public:
     QLineEdit *lineEdit_5;
     QSpacerItem *verticalSpacer_10;
     QLineEdit *lineEdit_6;
-    QPushButton *pushButton_2;
+    QPushButton *pushButton_Signup;
     QWidget *logo;
 
     void setupUi(QDialog *UserSignup)
@@ -224,10 +224,10 @@ public:
 
         horizontalLayout_2->addLayout(verticalLayout_2);
 
-        pushButton_2 = new QPushButton(groupBox);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(20, 270, 311, 25));
-        pushButton_2->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 0);\n"
+        pushButton_Signup = new QPushButton(groupBox);
+        pushButton_Signup->setObjectName("pushButton_Signup");
+        pushButton_Signup->setGeometry(QRect(20, 270, 311, 25));
+        pushButton_Signup->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 170, 0);\n"
 "color: rgb(255, 255, 255);\n"
 "font: 87 9pt \"Arial Black\";"));
         logo = new QWidget(UserSignup);
@@ -257,7 +257,7 @@ public:
         label_7->setText(QCoreApplication::translate("UserSignup", "Mobile", nullptr));
         label_8->setText(QCoreApplication::translate("UserSignup", "Password", nullptr));
         label_9->setText(QCoreApplication::translate("UserSignup", "Confirm password", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("UserSignup", "Sign up", nullptr));
+        pushButton_Signup->setText(QCoreApplication::translate("UserSignup", "Sign up", nullptr));
     } // retranslateUi
 
 };

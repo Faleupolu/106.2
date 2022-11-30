@@ -79,13 +79,10 @@ QVector<QVector<QString>> FileManager::ReadFile(QString fileName, int numRows){
                  if(i == numRows -1) {
                 columns.append(rows);
                 rows.clear();  }
+             }
+
 
         }
-    }    for(QVector<QString> strVec : columns){
-        for(QString str : strVec){
-        }
-    }
 
-    file.close();
     return columns;
 }

@@ -315,7 +315,7 @@ color: rgb(0, 85, 255);</string>
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="pushButton_Signup">
     <property name="geometry">
      <rect>
       <x>20</x>

@@ -31,8 +31,8 @@ struct qt_meta_stringdata_MainWindow_t {
     char stringdata1[28];
     char stringdata2[1];
     char stringdata3[29];
-    char stringdata4[32];
-    char stringdata5[35];
+    char stringdata4[22];
+    char stringdata5[25];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_MainWindow_t::offsetsAndSizes) + ofs), len 
@@ -42,15 +42,15 @@ Q_CONSTINIT static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_Main
         QT_MOC_LITERAL(11, 27),  // "on_pushButton_Login_clicked"
         QT_MOC_LITERAL(39, 0),  // ""
         QT_MOC_LITERAL(40, 28),  // "on_pushButton_SignUp_clicked"
-        QT_MOC_LITERAL(69, 31),  // "on_pushButtonadminlogin_clicked"
-        QT_MOC_LITERAL(101, 34)   // "on_pushButtonadminregister_cl..."
+        QT_MOC_LITERAL(69, 21),  // "on_adminlogin_clicked"
+        QT_MOC_LITERAL(91, 24)   // "on_adminregister_clicked"
     },
     "MainWindow",
     "on_pushButton_Login_clicked",
     "",
     "on_pushButton_SignUp_clicked",
-    "on_pushButtonadminlogin_clicked",
-    "on_pushButtonadminregister_clicked"
+    "on_adminlogin_clicked",
+    "on_adminregister_clicked"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -96,9 +96,9 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_SignUp_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_pushButtonadminlogin_clicked'
+        // method 'on_adminlogin_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_pushButtonadminregister_clicked'
+        // method 'on_adminregister_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -112,8 +112,8 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->on_pushButton_Login_clicked(); break;
         case 1: _t->on_pushButton_SignUp_clicked(); break;
-        case 2: _t->on_pushButtonadminlogin_clicked(); break;
-        case 3: _t->on_pushButtonadminregister_clicked(); break;
+        case 2: _t->on_adminlogin_clicked(); break;
+        case 3: _t->on_adminregister_clicked(); break;
         default: ;
         }
     }

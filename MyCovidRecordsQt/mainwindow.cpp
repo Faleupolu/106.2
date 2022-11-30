@@ -25,15 +25,35 @@ void MainWindow::on_pushButton_Login_clicked()
 }
 
 
+void MainWindow::on_pushButton_SignUp_clicked()
+{
+    this->hide();
+    us = new UserSignup(this);
+    us->show();
+}
 
 
 
-void MainWindow::on_pushButtonadminlogin_clicked()
+
+
+void MainWindow::on_adminlogin_clicked()
 {
 
   this->hide();
 al = new AdminLogin(this);
 al->show();
+}
+
+
+
+
+
+void MainWindow::on_adminregister_clicked()
+{
+
+  this->hide();
+us = new UserSignup(this);
+us->show();
 }
 
 

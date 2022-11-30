@@ -20,7 +20,8 @@ public:
 
 
 private slots:
-    void on_pushButton_clicked();
+    void on_adminlogin_clicked();
+    void on_adminregister_clicked();
 
 private:
     Ui::AdminLogin *ui;

@@ -1,5 +1,4 @@
 #include "userlogin.h"
-#include "dashboard.h"
 #include <QPixmap>
 #include <QMessageBox>
 #include "ui_userlogin.h"
@@ -30,10 +29,13 @@ void UserLogin::on_loginButton_clicked()
     QLineEdit* userEmail = ui->emailField;
     QLineEdit* userPassword = ui->passField;
 
-    QVector<QVector<QString>> fileContent = fManager.ReadFile("LoginInformation", 3);
+    QVector<QVector<QString>> fileContent = fManager.ReadFile("LoginInformation", 70);
+if(fileContent.empty()) {
+    qDebug("something is wrong, file emty");
+}
 
     for(int i = 0; i < fileContent.size(); i++) {
-
+//
         if(userEmail->text() == fileContent.at(i).at(0)) {
             if(userPassword->text() == fileContent.at(i).at(1)) {
                 signedIn = true;

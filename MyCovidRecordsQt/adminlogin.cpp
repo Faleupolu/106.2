@@ -17,8 +17,11 @@ AdminLogin::~AdminLogin()
 }
 
 
-void AdminLogin::on_pushButton_clicked()
+void AdminLogin::on_adminlogin_clicked()
 {
     QMessageBox::information(this, tr("Admin Log in  "), tr("successfully log in"));
 }
-
+void AdminLogin::on_adminregister_clicked()
+{
+    QMessageBox::information(this, tr("Admin Log in  "), tr("successfully registered"));
+}
